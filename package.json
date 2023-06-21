@@ -10,7 +10,6 @@
   "author": "zer02wo",
   "license": "ISC",
   "devDependencies": {
-    "prettier": "^2.8.8",
     "sass": "^1.63.5",
     "stylelint": "^15.8.0",
     "stylelint-config-standard-scss": "^9.0.0"
