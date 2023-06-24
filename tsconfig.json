@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "none",
+    "outDir": "public/assets/js",
+    "strict": true,
+    "allowJs": false,
+    "forceConsistentCasingInFileNames": true,
+  }
+}

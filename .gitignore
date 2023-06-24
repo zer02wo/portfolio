@@ -1,5 +1,11 @@
 # Depdendencies
-/node_modules
+node_modules/
 
-# Styles
-/public/assets/css
+# Compiled Styles
+/public/assets/css/
+
+# Compiled JavaScript
+/public/assets/js/
+
+# Editor
+.vscode/
