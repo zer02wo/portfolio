@@ -2,10 +2,13 @@
 node_modules/
 
 # Compiled Styles
-/public/assets/css/
+public/assets/css/
 
 # Compiled JavaScript
-/public/assets/js/
+public/assets/js/
 
 # Editor
 .vscode/
+
+# Local Netlify folder
+.netlify/

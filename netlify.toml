@@ -1,0 +1,9 @@
+[build]
+  command = 'npm run deploy:prod'
+  publish = 'public'
+  functions = 'netlify/functions'
+
+[dev]
+  command = 'npm run deploy:dev'
+  publish = 'public'
+  port = 3000
