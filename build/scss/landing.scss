@@ -1,0 +1,17 @@
+// Base
+@import 'base';
+
+// Landing page styles
+body {
+    // Fill page - no scroll
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    main {
+        @include flex-container($dir: column);
+
+        margin: $gutter-main;
+        flex: 1 1 100%;
+    }
+}

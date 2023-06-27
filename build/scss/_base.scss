@@ -1,0 +1,166 @@
+// Normalise
+@import 'normalize';
+
+// Text & Font
+// TODO: Poppins, Montserrat, Gilroy or Neue Montreal?
+$font-stack: Montserrat, sans-serif;
+$text-primary: #E9EAF6;
+$text-secondary: #666882;
+$text-accent: #5B3ADB;
+$base-px: 16px;
+$size-base: 1rem;
+$size-heading: $size-base * 1.5;
+$size-detail: $size-base * 0.875;
+
+// Background Colours
+$background-primary: #171531;
+$background-secondary: #25204D;
+$background-tertiary: #292657;
+$background-light: #F9F9FB;
+$background-light-secondary: #FFF;
+$background-accent: #5B3ADB;
+
+// Whitespace
+$gutter-main: 1.875rem; // 30px
+$gutter-main-mobile: 0.9375rem; // 15px
+$gutter-container: 1.25rem; // 20px
+$gutter-container-mobile: 0.625rem; // 10px
+$gutter-card: 0.9375rem; // 15px
+$gutter-card-mobile: 0.625rem; // 10px
+
+// Layout - flex, grid, etc
+@mixin flex-container($dir: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin grid-container($columns: auto auto, $rows: auto auto) {
+    display: grid;
+    grid-template-columns: $columns;
+    grid-template-rows: $rows;
+}
+
+// Effects - borders, shadows, etc
+$radius-container: 5px;
+$radius-card: 3px;
+
+// TODO: Look at refactoring this
+@mixin box-shadow($x: 0, $y: 10px, $blur: 15px, $spread: -3px, $rgba: rgb(0 0 0 / 10%)) {
+    box-shadow: $x $y
+                $blur $spread
+                $rgba;
+}
+
+
+// Animations
+
+// Base element styles
+h1 {
+    color: $text-accent;
+}
+
+h2 {
+    color: $text-secondary;
+}
+
+p {
+    margin: 0;
+    color: $text-secondary;
+}
+
+a {
+    color: $text-accent;
+    text-decoration: none;
+    border-bottom: solid 1px $text-accent;
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    padding: 0;
+}
+
+// Base semantic element styles
+body {
+    @include flex-container($dir: column, $justify: normal, $align: normal);
+
+    font: 100% $font-stack;
+    color: $text-primary;
+    background-color: $background-primary;
+
+    // Fill page - no scroll
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    main {
+        margin: $gutter-main;
+    }
+
+    header,
+    footer {
+        ul {
+            @include flex-container($justify: space-between);
+
+            gap: $gutter-card;
+        }
+    }
+
+    footer.container {
+        @include box-shadow($y: -10px);
+
+        .icon-link {
+            display: inline-block;
+            border: 0;
+            line-height: 0;
+
+            object {
+                pointer-events: none;
+            }
+        }
+    }
+
+    footer.container,
+    nav.container {
+        flex-direction: row;
+        margin: 0;
+    }
+
+    nav.container {
+        justify-content: space-between;
+
+        .logo {
+            border: 0;
+        }
+    }
+}
+
+// Base element-type styles
+.container {
+    @include flex-container($dir: column);
+    @include box-shadow;
+
+    background-color: $background-secondary;
+    margin: $gutter-container;
+    padding: $gutter-container;
+    border-radius: $radius-container;
+}
+
+.card {
+    @include box-shadow;
+
+    background-color: $background-tertiary;
+    padding: $gutter-card-mobile;
+    margin: $gutter-card;
+    border-radius: $radius-card;
+    max-width: 80rem;
+
+    &.accent {
+        background-color: $background-accent;
+        text-align: center;
+    }
+}
