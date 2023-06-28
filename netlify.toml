@@ -8,16 +8,28 @@
   publish = 'public'
   port = 3000
 
+# Reverse proxies must be redirected to prevent pages displaying with no styles/scripts:
+# https://answers.netlify.com/t/bug-in-non-trailing-slash-rewrite/452
+
+[[redirects]]
+from = 'projects/particles'
+to = 'projects'
 [[redirects]]
 from = 'projects/particles/*'
 to = 'https://saint-codes-particles.netlify.app/code/:splat'
 status = 200
 
 [[redirects]]
+from = 'projects/particle-orb'
+to = 'projects'
+[[redirects]]
 from = 'projects/particle-orb/*'
 to = 'https://saint-codes-particle-orb.netlify.app/code/:splat'
 status = 200
 
+[[redirects]]
+from = 'projects/broken-clocks'
+to = 'projects'
 [[redirects]]
 from = 'projects/broken-clocks/*'
 to = 'https://saint-codes-broken-clocks.netlify.app/code/:splat'
