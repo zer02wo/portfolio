@@ -7,3 +7,8 @@
   command = 'npm run deploy:dev'
   publish = 'public'
   port = 3000
+
+[[redirects]]
+from = '/particles/*'
+to = 'https://saint-codes-particles.netlify.app/code/:splat'
+status = 200
