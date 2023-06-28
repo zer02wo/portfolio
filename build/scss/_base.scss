@@ -56,6 +56,8 @@ $radius-card: 3px;
 
 // Animations
 
+// TODO: Refactor essential styles to own "critical" file which can be preloaded in <head>
+
 // Base element styles
 h1 {
     color: $text-accent;
