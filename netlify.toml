@@ -9,6 +9,16 @@
   port = 3000
 
 [[redirects]]
-from = '/particles/*'
+from = 'projects/particles/*'
+to = 'https://saint-codes-particles.netlify.app/code/:splat'
+status = 200
+
+[[redirects]]
+from = 'projects/particle-orb/*'
+to = 'https://saint-codes-particles.netlify.app/code/:splat'
+status = 200
+
+[[redirects]]
+from = 'projects/broken-clocks/*'
 to = 'https://saint-codes-particles.netlify.app/code/:splat'
 status = 200
