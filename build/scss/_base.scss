@@ -4,21 +4,19 @@
 // Text & Font
 // TODO: Poppins, Montserrat, Gilroy or Neue Montreal?
 $font-stack: Montserrat, sans-serif;
-$text-primary: #E9EAF6;
-$text-secondary: #666882;
-$text-accent: #5B3ADB;
+$text-primary: #00020A;
+$text-secondary: #777777;
+$text-accent: #8498FA;
+$text-blend: #F1F2F6;
 $base-px: 16px;
 $size-base: 1rem;
 $size-heading: $size-base * 1.5;
 $size-detail: $size-base * 0.875;
 
 // Background Colours
-$background-primary: #171531;
-$background-secondary: #25204D;
-$background-tertiary: #292657;
-$background-light: #F9F9FB;
-$background-light-secondary: #FFF;
-$background-accent: #5B3ADB;
+$background-primary: #F1F2F6;
+$background-secondary: #FFF;
+$background-accent: #8498FA;
 
 // Whitespace
 $gutter-main: 1.875rem; // 30px
@@ -76,6 +74,10 @@ a {
     color: $text-accent;
     text-decoration: none;
     border-bottom: solid 1px $text-accent;
+}
+
+blockquote {
+    text-align: center;
 }
 
 li {
@@ -155,14 +157,14 @@ body {
 .card {
     @include box-shadow;
 
-    background-color: $background-tertiary;
+    background-color: $background-accent;
     padding: $gutter-card-mobile;
     margin: $gutter-card;
     border-radius: $radius-card;
     max-width: 80rem;
 
-    &.accent {
-        background-color: $background-accent;
-        text-align: center;
+    a {
+        color: $text-blend;
+        border-bottom: solid 1px $text-blend;
     }
 }
