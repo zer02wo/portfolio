@@ -9,9 +9,32 @@ body {
     overflow: hidden;
 
     main {
-        @include flex-container($dir: column);
+        @include grid-container(
+            $columns: 15rem auto 15rem,
+            $rows: 7.5rem auto 7.5rem
+        );
 
-        margin: $gutter-main;
         flex: 1 1 100%;
+        border: 3px solid $background-accent;
+        padding: $gutter-card;
+
+        .page-title {
+            grid-column: span 2;
+            margin: 0;
+            font-size: 3rem;
+        }
+
+        .wrapper {
+            grid-column: 2;
+            width: fit-content;
+            margin: auto;
+            text-align: center;
+        }
+
+        .bullet-points {
+            grid-column: 3;
+            grid-row: 3;
+            color: $text-secondary;
+        }
     }
 }
