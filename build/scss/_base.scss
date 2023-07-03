@@ -26,6 +26,13 @@ $gutter-container-mobile: 0.625rem; // 10px
 $gutter-card: 0.9375rem; // 15px
 $gutter-card-mobile: 0.625rem; // 10px
 
+// Breakpoints
+$breakpoint-mobile: 400px;
+$breakpoint-tablet-s: 768px;
+$breakpoint-tablet-l: 992px;
+$breakpoint-desktop-s: 1280px;
+$breakpoint-desktop-l: 1440px;
+
 // Layout - flex, grid, etc
 @mixin flex-container($dir: row, $justify: center, $align: center) {
     display: flex;
@@ -95,11 +102,6 @@ body {
     font: 100% $font-stack;
     color: $text-primary;
     background-color: $background-primary;
-
-    // Fill page - no scroll
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
 
     main {
         margin: $gutter-main;

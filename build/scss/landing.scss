@@ -9,10 +9,14 @@ body {
     overflow: hidden;
 
     main {
-        @include grid-container(
-            $columns: 15rem auto 15rem,
-            $rows: 7.5rem auto 7.5rem
-        );
+        @include flex-container($dir: column, $justify: space-between, $align: start);
+
+        @media (min-width: $breakpoint-tablet-l) {
+            @include grid-container(
+                $columns: 15rem auto 15rem,
+                $rows: 7.5rem auto 7.5rem
+            );
+        }
 
         flex: 1 1 100%;
         border: 3px solid $background-accent;
@@ -21,14 +25,25 @@ body {
         .page-title {
             grid-column: span 2;
             margin: 0;
-            font-size: 3rem;
+
+            @media (min-width: $breakpoint-tablet-l) {
+                font-size: 3rem;
+            }
         }
 
         .wrapper {
             grid-column: 2;
             width: fit-content;
-            margin: auto;
-            text-align: center;
+
+            @media (min-width: $breakpoint-tablet-l) {
+                text-align: center;
+                margin: auto;
+            }
+
+            .card {
+                margin-left: 0;
+                margin-right: 0;
+            }
         }
 
         .bullet-points {
