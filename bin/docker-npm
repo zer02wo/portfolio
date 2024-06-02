@@ -1,2 +1,2 @@
 #!/bin/bash
-docker exec saint-codes-web npm $@
+docker exec -it saint-codes-web npm $@
