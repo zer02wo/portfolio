@@ -19,9 +19,14 @@ docker compose up
 docker compose down
 ```
 
-### Update package-lock.json
+### Attach shell to Docker Container
 ```
-docker compose run web npm install
+bin/docker bash
+```
+
+### Interact with npm in Docker Container
+```
+bin/docker-npm <npm-command-here>
 ```
 
 ## Deployment

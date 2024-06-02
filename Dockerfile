@@ -1,4 +1,5 @@
 FROM node:lts AS build
+
 WORKDIR /app
 COPY package*.json .
 
