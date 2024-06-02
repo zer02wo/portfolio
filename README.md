@@ -21,7 +21,7 @@ docker compose down
 
 ### Attach shell to Docker Container
 ```
-bin/docker bash
+bin/docker-bash
 ```
 
 ### Interact with npm in Docker Container
