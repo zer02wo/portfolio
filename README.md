@@ -2,17 +2,22 @@
 Projects
 
 ## Local Development
-- Initialise Docker:
+### Initialise Docker:
 ```
 docker compose up --build
 ```
 
-- Start Docker:
+### Start Docker:
 ```
 docker compose up
 ```
 
-- Stop Docker
+### Stop Docker
 ```
 docker compose down
+```
+
+## Deployment
+```
+TODO
 ```
