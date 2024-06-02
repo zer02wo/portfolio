@@ -9,6 +9,3 @@ public/assets/js/
 
 # Editor
 .vscode/
-
-# Local Netlify folder
-.netlify/
