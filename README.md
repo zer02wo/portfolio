@@ -11,11 +11,15 @@ This enables use of extensions (e.g. linters) requiring context from the Docker 
 
 ### Initialise Docker
 
+Dev environment available at http://localhost:4321/
+
 ```
 docker compose up --build
 ```
 
 ### Start Docker
+
+Dev environment available at http://localhost:4321/
 
 ```
 docker compose up
