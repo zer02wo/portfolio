@@ -8,7 +8,8 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint:ts": "eslint . --ext .ts"
+    "pretty": "prettier -w .",
+    "eslint": "eslint ."
   },
   "author": "zer02wo",
   "license": "BSD-3-Clause",
