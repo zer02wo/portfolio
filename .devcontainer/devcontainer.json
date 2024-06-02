@@ -1,0 +1,23 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/docker-existing-docker-compose
+{
+    "name": "Existing Docker Compose (Extend)",
+
+    "dockerComposeFile": ["../docker-compose.yml", "docker-compose.yml"],
+
+    "service": "web",
+
+    "workspaceFolder": "/app",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "dbaeumer.vscode-eslint",
+                "esbenp.prettier-vscode",
+                "rvest.vs-code-prettier-eslint",
+                "astro-build.astro-vscode",
+                "EditorConfig.EditorConfig",
+                "bradlc.vscode-tailwindcss"
+            ]
+        }
+    }
+}
