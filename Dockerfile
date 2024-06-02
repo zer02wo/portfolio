@@ -1,8 +1,10 @@
 FROM node:lts AS build
 WORKDIR /app
-COPY . .
+COPY package*.json .
 
 RUN npm i
-CMD ["npm", "start"]
+COPY . .
 
 EXPOSE 4321
+
+CMD ["npm", "start"]
