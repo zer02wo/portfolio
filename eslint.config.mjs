@@ -34,18 +34,63 @@ export default [
             },
         },
         rules: {
-            'astro/semi': 'error',
             'astro/no-set-html-directive': 'warn',
             'astro/no-set-text-directive': 'error',
             'astro/prefer-object-class-list': 'warn',
             'astro/prefer-split-class-list': 'warn',
             'astro/prefer-class-list-directive': 'warn',
+            'astro/semi': 'error',
         },
     },
     {
         files: ['**/*.{js,jsx,astro}'],
         rules: {
-            'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
+            'no-fallthrough': [
+                'error',
+                {
+                    allowEmptyCase: true,
+                },
+            ],
+            'arrow-body-style': ['error', 'always'],
+            camelcase: [
+                'warn',
+                {
+                    properties: 'always',
+                    ignoreDestructuring: true,
+                    ignoreImports: true,
+                    ignoreGlobals: true,
+                },
+            ],
+            'capitalized-comments': [
+                'warn',
+                'always',
+                {
+                    ignoreConsecutiveComments: true,
+                },
+            ],
+            curly: ['error', 'all'],
+            'default-param-last': 'error',
+            eqeqeq: ['error', 'always'],
+            'func-names': ['error', 'as-needed'],
+            'no-else-return': 'error',
+            'no-labels': 'error',
+            'no-lonely-if': 'error',
+            'no-nested-ternary': 'error',
+            'no-return-assign': 'error',
+            'no-unneeded-ternary': 'error',
+            'no-useless-concat': 'warn',
+            'no-useless-return': 'warn',
+            'no-var': 'error',
+            'prefer-const': 'error',
+            'prefer-template': 'error',
+            'sort-imports': [
+                'error',
+                {
+                    allowSeparatedGroups: true,
+                },
+            ],
+            strict: ['warn', 'safe'],
+            yoda: 'error',
         },
     },
     {
