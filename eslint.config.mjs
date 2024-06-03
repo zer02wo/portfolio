@@ -2,6 +2,7 @@ import astroEslintParser from 'astro-eslint-parser';
 import eslintPluginAstro from 'eslint-plugin-astro';
 import globals from 'globals';
 import js from '@eslint/js';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
 import tsEslint from 'typescript-eslint';
 import tsParser from '@typescript-eslint/parser';
 
@@ -9,6 +10,12 @@ export default [
     js.configs.recommended,
     ...eslintPluginAstro.configs['flat/recommended'],
     ...tsEslint.configs.recommended,
+    {
+        plugins: {
+            'jsx-a11y': jsxA11y,
+        },
+        rules: jsxA11y.configs.recommended.rules,
+    },
     {
         languageOptions: {
             globals: {
