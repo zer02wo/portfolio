@@ -26,6 +26,14 @@ export default [
                 extraFileExtensions: ['.astro'],
             },
         },
+        rules: {
+            'astro/semi': 'error',
+            'astro/no-set-html-directive': 'warn',
+            'astro/no-set-text-directive': 'error',
+            'astro/prefer-object-class-list': 'warn',
+            'astro/prefer-split-class-list': 'warn',
+            'astro/prefer-class-list-directive': 'warn',
+        },
     },
     {
         files: ['**/*.{js,jsx,astro}'],
